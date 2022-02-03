@@ -1,0 +1,116 @@
+.imdb-header {
+    background-color: rgb(0,0,0);
+    padding: 1.5%;
+    display:inline-block;
+    width: 100%;
+    min-height: 1.7rem;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+  font: 2em/1 Impact, HelveticaNeue-CondensedBold, sans-serif; // change the font size to whatever
+  color: #000;
+  text-shadow: 0 0 .15em #fff;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: bottom;
+  padding: .25em .35em;
+  border-radius: .15em;
+  background: radial-gradient(#ffffb8, #ce981d);
+  margin-right: 15px;
+  transform: scale(4,1.5);
+}
+
+/*.navbar_inner {
+    padding: 0px 0.75rem;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100vw;
+    margin: 0px;
+    --ipt-base-rgb: 255,255,255;
+}*/
+
+/* -------------------------------- */
+html, body {
+    background-repeat: no-repeat;
+    background-size: 100% 7px;
+    background-color: #FFF;
+    padding-bottom: 1px;
+    margin-top: -1px;
+    margin-bottom: -17px;
+    font-size: 13px;
+    margin:0;
+}
+
+#main {
+    position: static;
+    width: auto;
+    margin: 20px 100px;
+    min-width: 1008px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-content {
+    width: 646px;
+    float: left;
+    display: block;
+    line-height: 1.15;
+}
+
+.lister-list{
+    padding: 0;
+    position: relative;
+    margin: 0 0 22px;
+    width: auto;
+    display: block;
+}
+
+.lister-item {
+    display: table;
+    width: 100%;
+}
+
+.item {
+    background-color: #f6f6f5;
+    font-size: 11px;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.rating-value {
+    font-weight: bolder;
+}
+
+.poster {
+    float: left;
+    display: inline-block;
+}
+
+.plot-summary-wrapper {
+    overflow: hidden;
+    border-top: 1px solid #CCC;
+    font-size: 14px;
+}
+
+.plot-summary-wrapper .plot-summary {
+    padding: 18px 20px;
+}
+
+.minPlotHeightWithPoster {
+    min-height: 120px;
+}
+
+.plot-summary-wrapper .plot-summary .summary-text {
+    padding-bottom: 16px;
+    line-height: 18px;
+}

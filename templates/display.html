@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>IMDB Scrapping Project</title>
+        <script type="text/javascript" src="{{ url_for('static', filename = 'js/imdb.js') }}"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'css/display.css') }}">
+        <script src="https://kit.fontawesome.com/062a7d37d3.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="https://kit.fontawesome.com/062a7d37d3.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <nav class="imdb-header">
+            <div class="logo-container">
+                <i class='fa fa-imdb logo'></i>
+            </div>
+        </nav>
+
+        {% for movie in allMovies %}
+        <div id="main">
+            <div id="main-content">
+                <div class="lister-list">
+                    <div class="lister-item">
+                        <div class="item">
+                            <div class="title_wrapper">
+                                <h1 itemprop="name">
+                                    <a href="https://www.imdb.com{{movie.find('h3', class_='lister-item-header').a.get('href')}}"> {{movie.find('h3',class_='lister-item-header').a.text}}</a>
+                                </h1>
+                                <div class="subtext">
+                                    <time itemprop="duration" datetime="PT104M">
+                                        {{ movie.find('span', class_="runtime").text.strip() }}
+                                    </time>
+                                    <span class="ghost">|</span>
+                                    <span class="itemprop" itemprop="genre">
+                                        {{ movie.find('span', class_="genre").text.strip() }}
+                                    </span>
+                                   <div class="rating">
+                                        <i class="material-icons" style="color:rgb(237 183 71);font-size:14px">star</i>
+                                       <span class="rating-value">{{ movie.find('div', class_="ratings-imdb-rating").strong.text }}</span>
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="minPosterWithPlotSummaryHeight">
+                                <div class="poster">
+                                    <a href="https://www.imdb.com{{movie.find('h3', class_='lister-item-header').a.get('href')}}">
+                                        <img src="{{movie.find('img', class_='loadlate').get('loadlate')}}">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="plot-summary-wrapper">
+                                <div class="plot-summary minPlotHeightWithPoster">
+                                    <div class="summary-text" itemprop="description">
+                                        {{ movie.find_all('p', class_="text-muted")[1].text }}&nbsp;
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </body>
+</html>
+

@@ -1,0 +1,45 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    background: #000000;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
+.logo {
+  font: 2em/1 Impact, HelveticaNeue-CondensedBold, sans-serif; // change the font size to whatever
+  color: #000;
+  text-shadow: 0 0 .15em #fff;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: bottom;
+  padding: .25em .35em;
+  border-radius: .15em;
+  background: radial-gradient(#ffffb8, #ce981d);
+  margin-right: 15px;
+  transform: scale(1.5,1);
+}
+
+.movie-number {
+    outline: none;
+    height: 45px;
+    width: 300px;
+    border: 0;
+    padding-left: 7px;
+    background: radial-gradient(#ffffb8, #ce981d);
+}
+
+button {
+    outline: none;
+    height: 45px;
+    width: 50px;
+    border: 0;
+    padding: 7px;
+    background: radial-gradient(#ffffb8, #ce981d);
+    cursor: pointer;
+}
